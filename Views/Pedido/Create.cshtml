@@ -1,10 +1,10 @@
 @model PrjPanifMVC.Models.TbPedido
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Criar Pedido";
 }
 
-<h1>Create</h1>
+<h1>Adicionar Pedido</h1>
 
 <h4>TbPedido</h4>
 <hr />
@@ -13,40 +13,40 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="IdPedido" class="control-label"></label>
+                <label asp-for="IdPedido" class="control-label">Código Pedido</label>
                 <input asp-for="IdPedido" class="form-control" />
                 <span asp-validation-for="IdPedido" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="IdCliente" class="control-label"></label>
+                <label asp-for="IdCliente" class="control-label">Código Cliente</label>
                 <select asp-for="IdCliente" class ="form-control" asp-items="ViewBag.IdCliente"></select>
             </div>
             <div class="form-group">
-                <label asp-for="IdItemPedido" class="control-label"></label>
+                <label asp-for="IdItemPedido" class="control-label">Código Item de Pedido</label>
                 <input asp-for="IdItemPedido" class="form-control" />
                 <span asp-validation-for="IdItemPedido" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="IdRota" class="control-label"></label>
+                <label asp-for="IdRota" class="control-label">Código da Rota</label>
                 <select asp-for="IdRota" class ="form-control" asp-items="ViewBag.IdRota"></select>
             </div>
             <div class="form-group">
-                <label asp-for="Observacoes" class="control-label"></label>
+                <label asp-for="Observacoes" class="control-label">Observações</label>
                 <input asp-for="Observacoes" class="form-control" />
                 <span asp-validation-for="Observacoes" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="DataInicioRecorrencia" class="control-label"></label>
+                <label asp-for="DataInicioRecorrencia" class="control-label">Data de Início da Recorrência</label>
                 <input asp-for="DataInicioRecorrencia" class="form-control" />
                 <span asp-validation-for="DataInicioRecorrencia" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="DataFinalRecorrencia" class="control-label"></label>
+                <label asp-for="DataFinalRecorrencia" class="control-label">Data Final da Recorrência</label>
                 <input asp-for="DataFinalRecorrencia" class="form-control" />
                 <span asp-validation-for="DataFinalRecorrencia" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Data" class="control-label"></label>
+                <label asp-for="Data" class="control-label">Data Pedido</label>
                 <input asp-for="Data" class="form-control" />
                 <span asp-validation-for="Data" class="text-danger"></span>
             </div>
@@ -58,6 +58,6 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Retornar a Lista</a>
 </div>
 

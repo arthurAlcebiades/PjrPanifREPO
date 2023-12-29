@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33424.131
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrjPanifMVC", "PrjPanifMVC.csproj", "{5188F8DD-328B-4E1E-81DE-A72B85CBC7CC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5188F8DD-328B-4E1E-81DE-A72B85CBC7CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5188F8DD-328B-4E1E-81DE-A72B85CBC7CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5188F8DD-328B-4E1E-81DE-A72B85CBC7CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5188F8DD-328B-4E1E-81DE-A72B85CBC7CC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {32D7E863-8AFC-4905-9C52-D1B75139061D}
+	EndGlobalSection
+EndGlobal

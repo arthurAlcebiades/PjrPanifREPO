@@ -1,10 +1,10 @@
 @model PrjPanifMVC.Models.TbRotum
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Criar Rota";
 }
 
-<h1>Create</h1>
+<h1>Adicionar Rota</h1>
 
 <h4>TbRotum</h4>
 <hr />
@@ -13,16 +13,16 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="IdRota" class="control-label"></label>
+                <label asp-for="IdRota" class="control-label">Código da Rota</label>
                 <input asp-for="IdRota" class="form-control" />
                 <span asp-validation-for="IdRota" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="IdMotorista" class="control-label"></label>
+                <label asp-for="IdMotorista" class="control-label">Código Motorista</label>
                 <select asp-for="IdMotorista" class ="form-control" asp-items="ViewBag.IdMotorista"></select>
             </div>
             <div class="form-group">
-                <label asp-for="Periodo" class="control-label"></label>
+                <label asp-for="Periodo" class="control-label">Período da Rota</label>
                 <input asp-for="Periodo" class="form-control" />
                 <span asp-validation-for="Periodo" class="text-danger"></span>
             </div>
@@ -34,6 +34,6 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Retornar a Lista</a>
 </div>
 

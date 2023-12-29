@@ -1,12 +1,11 @@
 @model PrjPanifMVC.Models.TbProduto
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Editar Produto";
 }
 
-<h1>Edit</h1>
+<h1>Editar Produto</h1>
 
-<h4>TbProduto</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -14,12 +13,12 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="IdProduto" />
             <div class="form-group">
-                <label asp-for="NomeProduto" class="control-label"></label>
+                <label asp-for="NomeProduto" class="control-label">Nome do Produto</label>
                 <input asp-for="NomeProduto" class="form-control" />
                 <span asp-validation-for="NomeProduto" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Unidade" class="control-label"></label>
+                <label asp-for="Unidade" class="control-label">Tipo de Unidade</label>
                 <input asp-for="Unidade" class="form-control" />
                 <span asp-validation-for="Unidade" class="text-danger"></span>
             </div>
@@ -31,6 +30,6 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Retornar a Lista</a>
 </div>
 

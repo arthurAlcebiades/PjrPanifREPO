@@ -1,10 +1,10 @@
 @model PrjPanifMVC.Models.TbPedido
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Resumo";
 }
 
-<h1>Details</h1>
+<h1>Resumo Pedido</h1>
 
 <div>
     <h4>TbPedido</h4>
@@ -55,6 +55,6 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.IdPedido">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model?.IdPedido">Editar</a> |
+    <a asp-action="Index">Retornar a Lista</a>
 </div>

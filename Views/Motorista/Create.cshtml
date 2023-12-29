@@ -1,24 +1,23 @@
 @model PrjPanifMVC.Models.TbMotoristum
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Cadastro de Motoristas";
 }
 
-<h1>Create</h1>
+<h1>Adicionar Cadastro de Motorista</h1>
 
-<h4>TbMotoristum</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="IdMotorista" class="control-label"></label>
+                <label asp-for="IdMotorista" class="control-label">Código do Motorista</label>
                 <input asp-for="IdMotorista" class="form-control" />
                 <span asp-validation-for="IdMotorista" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="NomeMotorista" class="control-label"></label>
+                <label asp-for="NomeMotorista" class="control-label">Nome do Motorista</label>
                 <input asp-for="NomeMotorista" class="form-control" />
                 <span asp-validation-for="NomeMotorista" class="text-danger"></span>
             </div>
@@ -30,6 +29,6 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Retornar a Lista</a>
 </div>
 

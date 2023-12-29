@@ -183,8 +183,11 @@ public partial class PanificadoradbContext : DbContext
             entity.ToTable("TB_USUARIO");
 
             entity.Property(e => e.IdUsuario)
-                .ValueGeneratedNever()
+                .ValueGeneratedOnAdd()
                 .HasColumnName("Id_Usuario");
+            entity.Property(e => e.NomeUsuario)
+                .HasMaxLength(50)
+                .IsUnicode(false);
             entity.Property(e => e.Ativo)
                 .HasMaxLength(1)
                 .IsUnicode(false)
