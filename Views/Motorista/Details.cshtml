@@ -7,11 +7,10 @@
 <h1>Resumo</h1>
 
 <div>
-    <h4>TbMotoristum</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.NomeMotorista)
+            @Html.DisplayName("Nome")
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.NomeMotorista)
@@ -20,5 +19,5 @@
 </div>
 <div>
     <a asp-action="Edit" asp-route-id="@Model?.IdMotorista">Editar</a> |
-    <a asp-action="Index">Retornar a Lista</a>
+    <a asp-action="Index" class="btn-primary">Retornar a Lista</a>
 </div>

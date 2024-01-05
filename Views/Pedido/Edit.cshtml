@@ -18,11 +18,6 @@
                 <span asp-validation-for="IdCliente" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="IdItemPedido" class="control-label">Código Item Pedido</label>
-                <input asp-for="IdItemPedido" class="form-control" />
-                <span asp-validation-for="IdItemPedido" class="text-danger"></span>
-            </div>
-            <div class="form-group">
                 <label asp-for="IdRota" class="control-label">Código da Rota</label>
                 <select asp-for="IdRota" class="form-control" asp-items="ViewBag.IdRota"></select>
                 <span asp-validation-for="IdRota" class="text-danger"></span>
@@ -48,13 +43,10 @@
                 <span asp-validation-for="Data" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="Save" class="btn btn-primary" /> | 
+                <a asp-action="Index" class="btn-primary">Retornar a Lista</a>
             </div>
         </form>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Retornar a Lista</a>
 </div>
 

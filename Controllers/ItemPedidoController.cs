@@ -25,6 +25,31 @@ namespace PrjPanifMVC.Controllers
             return View(await panificadoradbContext.ToListAsync());
         }
 
+        public ActionResult ListarItens (int id)
+        {
+            var lista = _context.TbItemPedidos.Where(m => m.IdPedido == id);
+            ViewBag.TbPedido = id;
+            return PartialView(lista);
+        }
+
+        public ActionResult SalvarItens(int quantidade, int idProduto, int idPedido, decimal valorUnitario, decimal valorTotal, decimal valorDesconto)
+        {
+            var item = new TbItemPedido()
+            {
+                IdPedido = idPedido,
+                IdProduto = idProduto,
+                Quantidade = quantidade,
+                ValorUnitario = valorUnitario,
+                ValorTotal = valorTotal,
+                ValorDesconto = valorDesconto
+            };
+
+            _context.TbItemPedidos.Add(item);
+            _context.SaveChanges();
+
+            return Json(new { Resultado = item.IdPedido });
+        }
+
         // GET: ItemPedido/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -60,12 +85,12 @@ namespace PrjPanifMVC.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("IdItemPedido,IdPedido,IdProduto,Quantidade,ValorUnitario,ValorTotal,ValorDesconto")] TbItemPedido tbItemPedido)
         {
-            if (ModelState.IsValid)
-            {
+            //if (ModelState.IsValid)
+            //{
                 _context.Add(tbItemPedido);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
-            }
+            //}
             ViewData["IdPedido"] = new SelectList(_context.TbPedidos, "IdPedido", "IdPedido", tbItemPedido.IdPedido);
             ViewData["IdProduto"] = new SelectList(_context.TbProdutos, "IdProduto", "IdProduto", tbItemPedido.IdProduto);
             return View(tbItemPedido);

@@ -1,30 +1,19 @@
 @model PrjPanifMVC.Models.TbPedido
 
 @{
-    ViewData["Title"] = "Criar Pedido";
+    ViewData["Title"] = "Pedidos";
 }
 
 <h1>Adicionar Pedido</h1>
 
-<h4>TbPedido</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="IdPedido" class="control-label">Código Pedido</label>
-                <input asp-for="IdPedido" class="form-control" />
-                <span asp-validation-for="IdPedido" class="text-danger"></span>
-            </div>
-            <div class="form-group">
                 <label asp-for="IdCliente" class="control-label">Código Cliente</label>
                 <select asp-for="IdCliente" class ="form-control" asp-items="ViewBag.IdCliente"></select>
-            </div>
-            <div class="form-group">
-                <label asp-for="IdItemPedido" class="control-label">Código Item de Pedido</label>
-                <input asp-for="IdItemPedido" class="form-control" />
-                <span asp-validation-for="IdItemPedido" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="IdRota" class="control-label">Código da Rota</label>
@@ -50,14 +39,12 @@
                 <input asp-for="Data" class="form-control" />
                 <span asp-validation-for="Data" class="text-danger"></span>
             </div>
+
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Create" class="btn btn-primary" /> |
+                <a asp-action="Index" class="btn btn-primary">Retornar a Lista</a>
             </div>
         </form>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Retornar a Lista</a>
-</div>
+</div> 
 

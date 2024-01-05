@@ -42,7 +42,7 @@ public partial class PanificadoradbContext : DbContext
             entity.ToTable("TB_CLIENTE");
 
             entity.Property(e => e.IdCliente)
-                .ValueGeneratedNever()
+                .ValueGeneratedOnAdd()
                 .HasColumnName("Id_Cliente");
             entity.Property(e => e.CpfCnpj)
                 .HasMaxLength(18)
@@ -77,7 +77,7 @@ public partial class PanificadoradbContext : DbContext
             entity.ToTable("TB_ITEM_PEDIDO");
 
             entity.Property(e => e.IdItemPedido)
-                .ValueGeneratedNever()
+                .ValueGeneratedOnAdd()
                 .HasColumnName("Id_ItemPedido");
             entity.Property(e => e.IdPedido).HasColumnName("Id_Pedido");
             entity.Property(e => e.IdProduto).HasColumnName("Id_Produto");
@@ -102,7 +102,7 @@ public partial class PanificadoradbContext : DbContext
             entity.ToTable("TB_MOTORISTA");
 
             entity.Property(e => e.IdMotorista)
-                .ValueGeneratedNever()
+                .ValueGeneratedOnAdd()
                 .HasColumnName("Id_Motorista");
             entity.Property(e => e.NomeMotorista)
                 .HasMaxLength(50)
@@ -116,13 +116,12 @@ public partial class PanificadoradbContext : DbContext
             entity.ToTable("TB_PEDIDO");
 
             entity.Property(e => e.IdPedido)
-                .ValueGeneratedNever()
+                .ValueGeneratedOnAdd()
                 .HasColumnName("Id_Pedido");
             entity.Property(e => e.Data).HasColumnType("datetime");
             entity.Property(e => e.DataFinalRecorrencia).HasColumnType("datetime");
             entity.Property(e => e.DataInicioRecorrencia).HasColumnType("datetime");
             entity.Property(e => e.IdCliente).HasColumnName("Id_Cliente");
-            entity.Property(e => e.IdItemPedido).HasColumnName("Id_ItemPedido");
             entity.Property(e => e.IdRota).HasColumnName("Id_Rota");
             entity.Property(e => e.Observacoes)
                 .HasMaxLength(300)
@@ -146,7 +145,7 @@ public partial class PanificadoradbContext : DbContext
             entity.ToTable("TB_Produtos");
 
             entity.Property(e => e.IdProduto)
-                .ValueGeneratedNever()
+                .ValueGeneratedOnAdd()
                 .HasColumnName("Id_Produto");
             entity.Property(e => e.NomeProduto)
                 .HasMaxLength(50)
@@ -163,7 +162,7 @@ public partial class PanificadoradbContext : DbContext
             entity.ToTable("TB_ROTA");
 
             entity.Property(e => e.IdRota)
-                .ValueGeneratedNever()
+                .ValueGeneratedOnAdd()
                 .HasColumnName("Id_Rota");
             entity.Property(e => e.IdMotorista).HasColumnName("Id_Motorista");
             entity.Property(e => e.Periodo)

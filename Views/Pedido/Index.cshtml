@@ -9,29 +9,26 @@
 <p>
     <a asp-action="Create">Criar Novo</a>
 </p>
-<table class="table">
+<table class="table table-striped">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.IdItemPedido)
+                @Html.DisplayName("Data")
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Observacoes)
+                @Html.DisplayName("Id Cliente")
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.DataInicioRecorrencia)
+                @Html.DisplayName("Id Rota")
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.DataFinalRecorrencia)
+                @Html.DisplayName("Observações")
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Data)
+                @Html.DisplayName("Data Inicio Recorrência")
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IdClienteNavigation)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IdRotaNavigation)
+                @Html.DisplayName("Data Final Recorrência")
             </th>
             <th></th>
         </tr>
@@ -39,18 +36,6 @@
     <tbody>
 @foreach (var item in Model) {
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.IdItemPedido)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Observacoes)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DataInicioRecorrencia)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DataFinalRecorrencia)
-            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Data)
             </td>
@@ -61,9 +46,18 @@
                 @Html.DisplayFor(modelItem => item.IdRotaNavigation.IdRota)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.IdPedido">Editar</a> |
-                <a asp-action="Details" asp-route-id="@item.IdPedido">Resumo</a> |
-                <a asp-action="Delete" asp-route-id="@item.IdPedido">Deletar</a>
+                @Html.DisplayFor(modelItem => item.Observacoes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataInicioRecorrencia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataFinalRecorrencia) 
+            <td>
+                    <a asp-action="Edit" asp-route-id="@item.IdPedido" class="btn btn-primary">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.IdPedido" class="btn btn-primary">Resumo</a> |
+                    <a asp-action="Delete" asp-route-id="@item.IdPedido" class="btn btn-danger">Deletar</a>
+              
             </td>
         </tr>
 }

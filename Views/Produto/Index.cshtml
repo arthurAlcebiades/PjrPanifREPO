@@ -13,10 +13,10 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.NomeProduto)
+                @Html.DisplayName("Nome")
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Unidade)
+                @Html.DisplayName("Unidade")
             </th>
             <th></th>
         </tr>
@@ -31,9 +31,9 @@
                 @Html.DisplayFor(modelItem => item.Unidade)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.IdProduto">Editar</a> |
-                <a asp-action="Details" asp-route-id="@item.IdProduto">Resumo</a> |
-                <a asp-action="Delete" asp-route-id="@item.IdProduto">Deletar</a>
+                <a asp-action="Edit" asp-route-id="@item.IdProduto" class="btn btn-primary">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.IdProduto" class="btn btn-primary">Resumo</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdProduto" class="btn btn-danger">Deletar</a>
             </td>
         </tr>
 }

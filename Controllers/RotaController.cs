@@ -58,12 +58,13 @@ namespace PrjPanifMVC.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("IdRota,IdMotorista,Periodo")] TbRotum tbRotum)
         {
-            if (ModelState.IsValid)
-            {
+            
+         //  if (ModelState.IsValid)
+          // {
                 _context.Add(tbRotum);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
-            }
+          // }
             ViewData["IdMotorista"] = new SelectList(_context.TbMotorista, "IdMotorista", "IdMotorista", tbRotum.IdMotorista);
             return View(tbRotum);
         }

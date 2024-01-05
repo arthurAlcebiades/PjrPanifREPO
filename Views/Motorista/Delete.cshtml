@@ -8,11 +8,10 @@
 
 <h3>Você tem certeza que deseja deletar o Motorista?</h3>
 <div>
-    <h4>TbMotoristum</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.NomeMotorista)
+            @Html.DisplayName("Nome")
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.NomeMotorista)
@@ -22,6 +21,6 @@
     <form asp-action="Delete">
         <input type="hidden" asp-for="IdMotorista" />
         <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Index">Retornar a Lista</a>
+        <a asp-action="Index" class="btn-primary">Retornar a Lista</a>
     </form>
 </div>
