@@ -1,12 +1,11 @@
 @model PrjPanifMVC.Models.TbCliente
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Editar";
 }
 
-<h1>Edit</h1>
+<h1>Editar</h1>
 
-<h4>TbCliente</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -14,58 +13,56 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="IdCliente" />
             <div class="form-group">
-                <label asp-for="NomeCliente" class="control-label"></label>
+                <label asp-for="NomeCliente" class="control-label">Nome</label>
                 <input asp-for="NomeCliente" class="form-control" />
                 <span asp-validation-for="NomeCliente" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="CpfCnpj" class="control-label"></label>
+                <label asp-for="CpfCnpj" class="control-label">CPF/CNPJ</label>
                 <input asp-for="CpfCnpj" class="form-control" />
                 <span asp-validation-for="CpfCnpj" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="TelefoneContatoCliente" class="control-label"></label>
+                <label asp-for="TelefoneContatoCliente" class="control-label">Celular</label>
                 <input asp-for="TelefoneContatoCliente" class="form-control" />
                 <span asp-validation-for="TelefoneContatoCliente" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="EnderecoCliente" class="control-label"></label>
+                <label asp-for="EnderecoCliente" class="control-label">Rua</label>
                 <input asp-for="EnderecoCliente" class="form-control" />
                 <span asp-validation-for="EnderecoCliente" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="EnderecoBairro" class="control-label"></label>
+                <label asp-for="EnderecoBairro" class="control-label">Bairro</label>
                 <input asp-for="EnderecoBairro" class="form-control" />
                 <span asp-validation-for="EnderecoBairro" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="EnderecoCidade" class="control-label"></label>
+                <label asp-for="EnderecoCidade" class="control-label">Cidade</label>
                 <input asp-for="EnderecoCidade" class="form-control" />
                 <span asp-validation-for="EnderecoCidade" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="EnderecoCep" class="control-label"></label>
+                <label asp-for="EnderecoCep" class="control-label">CEP</label>
                 <input asp-for="EnderecoCep" class="form-control" />
                 <span asp-validation-for="EnderecoCep" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="EnderecoUf" class="control-label"></label>
+                <label asp-for="EnderecoUf" class="control-label">UF</label>
                 <input asp-for="EnderecoUf" class="form-control" />
                 <span asp-validation-for="EnderecoUf" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="EnderecoComplemento" class="control-label"></label>
+                <label asp-for="EnderecoComplemento" class="control-label">Complemento</label>
                 <input asp-for="EnderecoComplemento" class="form-control" />
                 <span asp-validation-for="EnderecoComplemento" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="Save" class="btn btn-primary" /> | 
+                <a asp-action="Index" class="btn btn-primary" style="display: inline">Retornar a Lista</a>
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
 

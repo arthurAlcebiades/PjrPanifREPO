@@ -1,43 +1,43 @@
 @model IEnumerable<PrjPanifMVC.Models.TbCliente>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Clientes";
 }
 
-<h1>Index</h1>
+<h1>Lista de Clientes</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Criar Novo</a>
 </p>
-<table class="table">
+<table class="table table-striped">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.NomeCliente)
+                @Html.DisplayName("Nome")
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CpfCnpj)
+                @Html.DisplayName("CPF/CNPJ")
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.TelefoneContatoCliente)
+                @Html.DisplayName("Celular")
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.EnderecoCliente)
+                @Html.DisplayName("Rua")
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.EnderecoBairro)
+                @Html.DisplayName("Bairro")
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.EnderecoCidade)
+                @Html.DisplayName("Cidade")
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.EnderecoCep)
+                @Html.DisplayName("CEP")
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.EnderecoUf)
+                @Html.DisplayName("UF")
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.EnderecoComplemento)
+                @Html.DisplayName("Complemento")
             </th>
             <th></th>
         </tr>
@@ -45,7 +45,7 @@
     <tbody>
 @foreach (var item in Model) {
         <tr>
-            <td>
+            <td scope ="row">
                 @Html.DisplayFor(modelItem => item.NomeCliente)
             </td>
             <td>
@@ -73,9 +73,9 @@
                 @Html.DisplayFor(modelItem => item.EnderecoComplemento)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.IdCliente">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.IdCliente">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.IdCliente">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.IdCliente" class="btn btn-primary">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.IdCliente" class="btn btn-primary">Resumo</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdCliente" class="btn btn-danger">Deletar</a>
             </td>
         </tr>
 }

@@ -58,14 +58,14 @@ namespace PrjPanifMVC.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("IdPedido,IdCliente,IdItemPedido,IdRota,Observacoes,DataInicioRecorrencia,DataFinalRecorrencia,Data")] TbPedido tbPedido)
+        public async Task<IActionResult> Create( TbPedido tbPedido)
         {
-            if (ModelState.IsValid)
-            {
+           // if (ModelState.IsValid)
+           // {
                 _context.Add(tbPedido);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
+               // return RedirectToAction(nameof(Index));
+            //}
             ViewData["IdCliente"] = new SelectList(_context.TbClientes, "IdCliente", "IdCliente", tbPedido.IdCliente);
             ViewData["IdRota"] = new SelectList(_context.TbRota, "IdRota", "IdRota", tbPedido.IdRota);
             return View(tbPedido);
@@ -94,7 +94,7 @@ namespace PrjPanifMVC.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("IdPedido,IdCliente,IdItemPedido,IdRota,Observacoes,DataInicioRecorrencia,DataFinalRecorrencia,Data")] TbPedido tbPedido)
+        public async Task<IActionResult> Edit(int id, [Bind("IdPedido,IdCliente,IdRota,Observacoes,DataInicioRecorrencia,DataFinalRecorrencia,Data")] TbPedido tbPedido)
         {
             if (id != tbPedido.IdPedido)
             {

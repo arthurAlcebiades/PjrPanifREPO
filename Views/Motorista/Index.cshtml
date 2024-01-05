@@ -1,19 +1,19 @@
 @model IEnumerable<PrjPanifMVC.Models.TbMotoristum>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Motoristas";
 }
 
-<h1>Index</h1>
+<h1>Lista de Motoristas</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Criar Novo</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.NomeMotorista)
+                @Html.DisplayName("Nome")
             </th>
             <th></th>
         </tr>
@@ -25,9 +25,9 @@
                 @Html.DisplayFor(modelItem => item.NomeMotorista)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.IdMotorista">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.IdMotorista">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.IdMotorista">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.IdMotorista" class="btn btn-primary">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.IdMotorista" class="btn btn-primary">Resumo</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdMotorista" class="btn btn-danger">Deletar</a>
             </td>
         </tr>
 }

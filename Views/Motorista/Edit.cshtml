@@ -1,10 +1,10 @@
 @model PrjPanifMVC.Models.TbMotoristum
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Editar Cadastro";
 }
 
-<h1>Edit</h1>
+<h1>Editar Cadastro</h1>
 
 <h4>TbMotoristum</h4>
 <hr />
@@ -14,18 +14,16 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="IdMotorista" />
             <div class="form-group">
-                <label asp-for="NomeMotorista" class="control-label"></label>
+                <label asp-for="NomeMotorista" class="control-label">Nome do Motorista</label>
                 <input asp-for="NomeMotorista" class="form-control" />
                 <span asp-validation-for="NomeMotorista" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
+                <a asp-action="Index" class="btn-primary">Retornar a lista</a>
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
 

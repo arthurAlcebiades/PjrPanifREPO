@@ -9,7 +9,6 @@ public partial class TbPedido
 
     public int IdCliente { get; set; }
 
-    public int IdItemPedido { get; set; }
 
     public int IdRota { get; set; }
 

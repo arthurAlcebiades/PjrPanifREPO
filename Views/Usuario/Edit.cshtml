@@ -14,12 +14,17 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="IdUsuario" />
             <div class="form-group">
-                <label asp-for="SenhaUsuario" class="control-label"></label>
+                <label asp-for="NomeUsuario" class="control-label">Nome do Usuário</label>
+                <input asp-for="NomeUsuario" class="form-control" />
+                <span asp-validation-for="NomeUsuario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SenhaUsuario" class="control-label">Senha do Usuário</label>
                 <input asp-for="SenhaUsuario" class="form-control" />
                 <span asp-validation-for="SenhaUsuario" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Ativo" class="control-label"></label>
+                <label asp-for="Ativo" class="control-label">Status do Usuário</label>
                 <input asp-for="Ativo" class="form-control" />
                 <span asp-validation-for="Ativo" class="text-danger"></span>
             </div>
@@ -31,6 +36,6 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Retornar a Lista</a>
 </div>
 

@@ -13,46 +13,38 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="IdItemPedido" class="control-label"></label>
-                <input asp-for="IdItemPedido" class="form-control" />
-                <span asp-validation-for="IdItemPedido" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="IdPedido" class="control-label"></label>
+                <label asp-for="IdPedido" class="control-label">Id Pedido</label>
                 <select asp-for="IdPedido" class ="form-control" asp-items="ViewBag.IdPedido"></select>
             </div>
             <div class="form-group">
-                <label asp-for="IdProduto" class="control-label"></label>
+                <label asp-for="IdProduto" class="control-label">Id Produto</label>
                 <select asp-for="IdProduto" class ="form-control" asp-items="ViewBag.IdProduto"></select>
             </div>
             <div class="form-group">
-                <label asp-for="Quantidade" class="control-label"></label>
+                <label asp-for="Quantidade" class="control-label">Quantidade</label>
                 <input asp-for="Quantidade" class="form-control" />
                 <span asp-validation-for="Quantidade" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ValorUnitario" class="control-label"></label>
+                <label asp-for="ValorUnitario" class="control-label">Valor Unitário</label>
                 <input asp-for="ValorUnitario" class="form-control" />
                 <span asp-validation-for="ValorUnitario" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ValorTotal" class="control-label"></label>
+                <label asp-for="ValorTotal" class="control-label">Valor Total</label>
                 <input asp-for="ValorTotal" class="form-control" />
                 <span asp-validation-for="ValorTotal" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ValorDesconto" class="control-label"></label>
+                <label asp-for="ValorDesconto" class="control-label">Valor de Desconto</label>
                 <input asp-for="ValorDesconto" class="form-control" />
                 <span asp-validation-for="ValorDesconto" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Create" class="btn btn-primary" /> | 
+                <a asp-action="Index" class="btn btn-primary">Voltar</a>
             </div>
         </form>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
 </div>
 

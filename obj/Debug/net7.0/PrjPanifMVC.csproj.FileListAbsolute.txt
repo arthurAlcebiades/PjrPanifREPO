@@ -39,13 +39,10 @@ C:\Estudos\PrjPanifMVC\bin\Debug\net7.0\System.Runtime.Caching.dll
 C:\Estudos\PrjPanifMVC\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
 C:\Estudos\PrjPanifMVC\bin\Debug\net7.0\System.Security.Permissions.dll
 C:\Estudos\PrjPanifMVC\bin\Debug\net7.0\System.Windows.Extensions.dll
-C:\Estudos\PrjPanifMVC\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-C:\Estudos\PrjPanifMVC\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
 C:\Estudos\PrjPanifMVC\bin\Debug\net7.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Estudos\PrjPanifMVC\bin\Debug\net7.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Estudos\PrjPanifMVC\bin\Debug\net7.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Estudos\PrjPanifMVC\bin\Debug\net7.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Estudos\PrjPanifMVC\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Estudos\PrjPanifMVC\obj\Debug\net7.0\PrjPanifMVC.csproj.AssemblyReference.cache
 C:\Estudos\PrjPanifMVC\obj\Debug\net7.0\PrjPanifMVC.GeneratedMSBuildEditorConfig.editorconfig
 C:\Estudos\PrjPanifMVC\obj\Debug\net7.0\PrjPanifMVC.AssemblyInfoInputs.cache
@@ -277,3 +274,13 @@ C:\Estudos\PrjPanifMVC\bin\Debug\net7.0\runtimes\unix\lib\net6.0\System.Drawing.
 C:\Estudos\PrjPanifMVC\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 C:\Estudos\PrjPanifMVC\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Estudos\PrjPanifMVC\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Estudos\PrjPanifMVC\bin\Debug\net7.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Estudos\PrjPanifMVC\bin\Debug\net7.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Estudos\PrjPanifMVC\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\Estudos\PrjPanifMVC\bin\Debug\net7.0\System.Web.Mvc.dll
+C:\Estudos\PrjPanifMVC\bin\Debug\net7.0\System.Web.Razor.dll
+C:\Estudos\PrjPanifMVC\bin\Debug\net7.0\System.Web.Helpers.dll
+C:\Estudos\PrjPanifMVC\bin\Debug\net7.0\System.Web.WebPages.Deployment.dll
+C:\Estudos\PrjPanifMVC\bin\Debug\net7.0\System.Web.WebPages.Razor.dll
+C:\Estudos\PrjPanifMVC\bin\Debug\net7.0\System.Web.WebPages.dll
+C:\Estudos\PrjPanifMVC\bin\Debug\net7.0\Microsoft.Web.Infrastructure.dll

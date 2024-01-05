@@ -55,7 +55,7 @@ namespace PrjPanifMVC.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("IdUsuario,SenhaUsuario,Ativo")] TbUsuario tbUsuario)
+        public async Task<IActionResult> Create([Bind("IdUsuario,NomeUsuario,SenhaUsuario,Ativo")] TbUsuario tbUsuario)
         {
             if (ModelState.IsValid)
             {
