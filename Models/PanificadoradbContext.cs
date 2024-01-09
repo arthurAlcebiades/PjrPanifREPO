@@ -31,7 +31,7 @@ public partial class PanificadoradbContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Data Source=localhost\\SQLEXPRESS;Initial Catalog=PANIFICADORADB;Integrated Security=True;TrustServerCertificate=True");
+        => optionsBuilder.UseNpgsql("User ID=postgres;Password=@Alcebiades12;Host=localhost;Port=5432;Database=PrjPaniDb;Pooling=true;");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -118,9 +118,9 @@ public partial class PanificadoradbContext : DbContext
             entity.Property(e => e.IdPedido)
                 .ValueGeneratedOnAdd()
                 .HasColumnName("Id_Pedido");
-            entity.Property(e => e.Data).HasColumnType("datetime");
-            entity.Property(e => e.DataFinalRecorrencia).HasColumnType("datetime");
-            entity.Property(e => e.DataInicioRecorrencia).HasColumnType("datetime");
+            entity.Property(e => e.Data).HasColumnType("timestamp");
+            entity.Property(e => e.DataFinalRecorrencia).HasColumnType("timestamp");
+            entity.Property(e => e.DataInicioRecorrencia).HasColumnType("timestamp");
             entity.Property(e => e.IdCliente).HasColumnName("Id_Cliente");
             entity.Property(e => e.IdRota).HasColumnName("Id_Rota");
             entity.Property(e => e.Observacoes)

@@ -284,3 +284,5 @@ C:\Estudos\PrjPanifMVC\bin\Debug\net7.0\System.Web.WebPages.Deployment.dll
 C:\Estudos\PrjPanifMVC\bin\Debug\net7.0\System.Web.WebPages.Razor.dll
 C:\Estudos\PrjPanifMVC\bin\Debug\net7.0\System.Web.WebPages.dll
 C:\Estudos\PrjPanifMVC\bin\Debug\net7.0\Microsoft.Web.Infrastructure.dll
+C:\Estudos\PrjPanifMVC\bin\Debug\net7.0\Npgsql.dll
+C:\Estudos\PrjPanifMVC\bin\Debug\net7.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
